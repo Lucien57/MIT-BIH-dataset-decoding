@@ -1,0 +1,62 @@
+experiment:
+  name: NM2019_MITBIH_5class
+  seed: 0
+  save_dir: saved
+  log_dir: logs
+
+data:
+  data_dir: data
+  x_file: dataset_raw.npy
+  y_file: labelset_raw.npy
+  n_class: 5
+  input_length: 300
+  in_channels: 1
+  test_size: 0.20
+  val_size: 0.10          # fraction of the full dataset; split from the non-test part
+  split_seed: 0
+  stratify: true
+  normalize: zscore_sample # choices: none, zscore_sample, zscore_train, minmax_sample
+  clip_value: null         # e.g. 5.0; null means no clipping
+  num_workers: 4
+  pin_memory: true
+  fold: 5
+
+model:
+  name: NM2019
+  n_class: 5
+  in_channels: 1
+  conv_filter_length: 16
+  conv_num_filters_start: 32
+  conv_subsample_lengths: [1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2]
+  conv_num_skip: 2
+  conv_increase_channels_at: 4
+  conv_dropout: 0.20
+  shortcut: maxpool_zero_pad # choices: maxpool_zero_pad, projection
+
+augmentation:
+  enable: true
+  noise_std: 0.01
+  scale_range: [0.90, 1.10]
+  shift_max: 8
+  time_mask_ratio: 0.00
+  p: 0.50
+
+train:
+  device: cuda:0
+  epochs: 8
+  batch_size: 128
+  optimizer: AdamW       # choices: Adam, AdamW, SGD
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  class_weight: balanced # choices: none, balanced
+  grad_clip_norm: 1.0
+  amp: true
+  early_stop_patience: 15
+  print_freq: 50
+
+scheduler:
+  name: plateau          # choices: none, plateau, cosine
+  mode: min
+  factor: 0.1
+  patience: 2
+  min_lr: 1.0e-6

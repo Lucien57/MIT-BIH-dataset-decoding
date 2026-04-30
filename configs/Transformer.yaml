@@ -1,0 +1,64 @@
+experiment:
+  name: ECGTransformer_MITBIH_5class
+  seed: 0
+  save_dir: saved
+  log_dir: logs
+
+data:
+  data_dir: data
+  x_file: dataset_raw.npy
+  y_file: labelset_raw.npy
+  n_class: 5
+  input_length: 300
+  in_channels: 1
+  test_size: 0.20
+  val_size: 0.10
+  split_seed: 0
+  stratify: true
+  normalize: zscore_sample
+  clip_value: null
+  num_workers: 4
+  pin_memory: true
+  fold: 5
+
+model:
+  name: ECGTransformer
+  n_class: 5
+  in_channels: 1
+  input_length: 300
+  d_model: 64
+  nhead: 4
+  num_layers: 3
+  dim_feedforward: 128
+  patch_size: 6
+  patch_stride: 3
+  dropout: 0.10
+  pooling: mean
+
+augmentation:
+  enable: true
+  noise_std: 0.01
+  scale_range: [0.90, 1.10]
+  shift_max: 8
+  time_mask_ratio: 0.03
+  p: 0.50
+
+train:
+  device: cuda:0
+  epochs: 10
+  batch_size: 128
+  optimizer: AdamW
+  learning_rate: 0.0005
+  weight_decay: 0.0001
+  class_weight: balanced
+  grad_clip_norm: 1.0
+  amp: true
+  early_stop_patience: 18
+  print_freq: 50
+
+scheduler:
+  name: plateau
+  mode: min
+  factor: 0.5
+  patience: 3
+  min_lr: 1.0e-6

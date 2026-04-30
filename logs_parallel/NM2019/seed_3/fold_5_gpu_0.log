@@ -1,0 +1,387 @@
+2026-04-29 20:35:13 | ========== Run Info ==========
+2026-04-29 20:35:13 | Experiment: NM2019_MITBIH_5class
+2026-04-29 20:35:13 | Model: NM2019
+2026-04-29 20:35:13 | Dataset: dataset_raw.npy + labelset_raw.npy
+2026-04-29 20:35:13 | Split: stratified_kfold | n_splits=10 | test_fold=5 | val_fold=6
+2026-04-29 20:35:13 | Samples: total=92192 | train=73754 | val=9219 | test=9219
+2026-04-29 20:35:13 | Classes: 5 | Channels: 1 | Time points: 300
+2026-04-29 20:35:13 | Class counts total: [71723, 1950, 6974, 6578, 4967]
+2026-04-29 20:35:13 | Class counts train: [57379, 1560, 5578, 5264, 3973]
+2026-04-29 20:35:13 | Class counts val: [7172, 195, 698, 657, 497]
+2026-04-29 20:35:13 | Class counts test: [7172, 195, 698, 657, 497]
+2026-04-29 20:35:13 | Batch size: 128 | LR: 0.001 | Weight decay: 0.0001
+2026-04-29 20:35:13 | Normalization: zscore_sample | Augmentation: True
+2026-04-29 20:35:13 | Trainable parameters: 10,462,597
+2026-04-29 20:35:13 | ================================
+2026-04-29 20:35:13 | Class weights: [0.06809999793767929, 2.505199909210205, 0.7006000280380249, 0.7423999905586243, 0.9836999773979187]
+/home/mazhiyuan/LZY/ECG/train.py:287: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=bool(cfg["train"].get("amp", True)) and device.type == "cuda")
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:35:17 | Epoch 001 | step 0050/0577 | loss 0.7708 | acc 0.6072
+2026-04-29 20:35:18 | Epoch 001 | step 0100/0577 | loss 0.5648 | acc 0.7498
+2026-04-29 20:35:20 | Epoch 001 | step 0150/0577 | loss 0.4786 | acc 0.7920
+2026-04-29 20:35:21 | Epoch 001 | step 0200/0577 | loss 0.4088 | acc 0.8228
+2026-04-29 20:35:22 | Epoch 001 | step 0250/0577 | loss 0.3748 | acc 0.8419
+2026-04-29 20:35:24 | Epoch 001 | step 0300/0577 | loss 0.3398 | acc 0.8575
+2026-04-29 20:35:25 | Epoch 001 | step 0350/0577 | loss 0.3167 | acc 0.8684
+2026-04-29 20:35:27 | Epoch 001 | step 0400/0577 | loss 0.2945 | acc 0.8772
+2026-04-29 20:35:28 | Epoch 001 | step 0450/0577 | loss 0.2758 | acc 0.8857
+2026-04-29 20:35:29 | Epoch 001 | step 0500/0577 | loss 0.2597 | acc 0.8922
+2026-04-29 20:35:31 | Epoch 001 | step 0550/0577 | loss 0.2468 | acc 0.8984
+2026-04-29 20:35:32 | Epoch 001 | lr 1.00e-03 | train loss 0.2403 acc 0.9008 | val loss 0.1597 acc 0.9310 macroF1 0.8581 weightedF1 0.9470
+2026-04-29 20:35:32 | Saved best model at epoch 001.
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:35:34 | Epoch 002 | step 0050/0577 | loss 0.0994 | acc 0.9661
+2026-04-29 20:35:35 | Epoch 002 | step 0100/0577 | loss 0.0921 | acc 0.9631
+2026-04-29 20:35:37 | Epoch 002 | step 0150/0577 | loss 0.1002 | acc 0.9630
+2026-04-29 20:35:38 | Epoch 002 | step 0200/0577 | loss 0.1027 | acc 0.9582
+2026-04-29 20:35:39 | Epoch 002 | step 0250/0577 | loss 0.1060 | acc 0.9581
+2026-04-29 20:35:41 | Epoch 002 | step 0300/0577 | loss 0.1053 | acc 0.9573
+2026-04-29 20:35:42 | Epoch 002 | step 0350/0577 | loss 0.1018 | acc 0.9589
+2026-04-29 20:35:43 | Epoch 002 | step 0400/0577 | loss 0.1015 | acc 0.9594
+2026-04-29 20:35:45 | Epoch 002 | step 0450/0577 | loss 0.1035 | acc 0.9595
+2026-04-29 20:35:46 | Epoch 002 | step 0500/0577 | loss 0.1030 | acc 0.9607
+2026-04-29 20:35:47 | Epoch 002 | step 0550/0577 | loss 0.1000 | acc 0.9608
+2026-04-29 20:35:49 | Epoch 002 | lr 1.00e-03 | train loss 0.1002 acc 0.9612 | val loss 0.0989 acc 0.9761 macroF1 0.9343 weightedF1 0.9774
+2026-04-29 20:35:49 | Saved best model at epoch 002.
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:35:50 | Epoch 003 | step 0050/0577 | loss 0.0890 | acc 0.9664
+2026-04-29 20:35:52 | Epoch 003 | step 0100/0577 | loss 0.0825 | acc 0.9677
+2026-04-29 20:35:53 | Epoch 003 | step 0150/0577 | loss 0.0812 | acc 0.9700
+2026-04-29 20:35:54 | Epoch 003 | step 0200/0577 | loss 0.0748 | acc 0.9706
+2026-04-29 20:35:56 | Epoch 003 | step 0250/0577 | loss 0.0741 | acc 0.9694
+2026-04-29 20:35:57 | Epoch 003 | step 0300/0577 | loss 0.0762 | acc 0.9690
+2026-04-29 20:35:59 | Epoch 003 | step 0350/0577 | loss 0.0760 | acc 0.9684
+2026-04-29 20:36:00 | Epoch 003 | step 0400/0577 | loss 0.0761 | acc 0.9690
+2026-04-29 20:36:01 | Epoch 003 | step 0450/0577 | loss 0.0757 | acc 0.9682
+2026-04-29 20:36:03 | Epoch 003 | step 0500/0577 | loss 0.0741 | acc 0.9694
+2026-04-29 20:36:04 | Epoch 003 | step 0550/0577 | loss 0.0754 | acc 0.9697
+2026-04-29 20:36:06 | Epoch 003 | lr 1.00e-03 | train loss 0.0745 acc 0.9700 | val loss 0.0801 acc 0.9806 macroF1 0.9393 weightedF1 0.9818
+2026-04-29 20:36:06 | Saved best model at epoch 003.
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:36:07 | Epoch 004 | step 0050/0577 | loss 0.0729 | acc 0.9741
+2026-04-29 20:36:09 | Epoch 004 | step 0100/0577 | loss 0.0704 | acc 0.9713
+2026-04-29 20:36:10 | Epoch 004 | step 0150/0577 | loss 0.0716 | acc 0.9690
+2026-04-29 20:36:11 | Epoch 004 | step 0200/0577 | loss 0.0646 | acc 0.9708
+2026-04-29 20:36:13 | Epoch 004 | step 0250/0577 | loss 0.0640 | acc 0.9713
+2026-04-29 20:36:14 | Epoch 004 | step 0300/0577 | loss 0.0646 | acc 0.9722
+2026-04-29 20:36:15 | Epoch 004 | step 0350/0577 | loss 0.0666 | acc 0.9716
+2026-04-29 20:36:17 | Epoch 004 | step 0400/0577 | loss 0.0659 | acc 0.9720
+2026-04-29 20:36:18 | Epoch 004 | step 0450/0577 | loss 0.0640 | acc 0.9724
+2026-04-29 20:36:20 | Epoch 004 | step 0500/0577 | loss 0.0627 | acc 0.9723
+2026-04-29 20:36:21 | Epoch 004 | step 0550/0577 | loss 0.0634 | acc 0.9722
+2026-04-29 20:36:23 | Epoch 004 | lr 1.00e-03 | train loss 0.0635 acc 0.9720 | val loss 0.1138 acc 0.9606 macroF1 0.8961 weightedF1 0.9668
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:36:24 | Epoch 005 | step 0050/0577 | loss 0.0697 | acc 0.9744
+2026-04-29 20:36:25 | Epoch 005 | step 0100/0577 | loss 0.0596 | acc 0.9759
+2026-04-29 20:36:27 | Epoch 005 | step 0150/0577 | loss 0.0567 | acc 0.9754
+2026-04-29 20:36:28 | Epoch 005 | step 0200/0577 | loss 0.0588 | acc 0.9756
+2026-04-29 20:36:29 | Epoch 005 | step 0250/0577 | loss 0.0564 | acc 0.9754
+2026-04-29 20:36:31 | Epoch 005 | step 0300/0577 | loss 0.0541 | acc 0.9762
+2026-04-29 20:36:32 | Epoch 005 | step 0350/0577 | loss 0.0549 | acc 0.9750
+2026-04-29 20:36:34 | Epoch 005 | step 0400/0577 | loss 0.0543 | acc 0.9746
+2026-04-29 20:36:35 | Epoch 005 | step 0450/0577 | loss 0.0529 | acc 0.9753
+2026-04-29 20:36:37 | Epoch 005 | step 0500/0577 | loss 0.0530 | acc 0.9754
+2026-04-29 20:36:38 | Epoch 005 | step 0550/0577 | loss 0.0535 | acc 0.9751
+2026-04-29 20:36:40 | Epoch 005 | lr 1.00e-03 | train loss 0.0530 acc 0.9749 | val loss 0.0733 acc 0.9876 macroF1 0.9582 weightedF1 0.9881
+2026-04-29 20:36:40 | Saved best model at epoch 005.
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:36:41 | Epoch 006 | step 0050/0577 | loss 0.0609 | acc 0.9828
+2026-04-29 20:36:43 | Epoch 006 | step 0100/0577 | loss 0.0529 | acc 0.9769
+2026-04-29 20:36:44 | Epoch 006 | step 0150/0577 | loss 0.0512 | acc 0.9759
+2026-04-29 20:36:46 | Epoch 006 | step 0200/0577 | loss 0.0473 | acc 0.9762
+2026-04-29 20:36:47 | Epoch 006 | step 0250/0577 | loss 0.0489 | acc 0.9758
+2026-04-29 20:36:48 | Epoch 006 | step 0300/0577 | loss 0.0487 | acc 0.9748
+2026-04-29 20:36:50 | Epoch 006 | step 0350/0577 | loss 0.0488 | acc 0.9756
+2026-04-29 20:36:51 | Epoch 006 | step 0400/0577 | loss 0.0481 | acc 0.9760
+2026-04-29 20:36:53 | Epoch 006 | step 0450/0577 | loss 0.0488 | acc 0.9758
+2026-04-29 20:36:54 | Epoch 006 | step 0500/0577 | loss 0.0482 | acc 0.9765
+2026-04-29 20:36:56 | Epoch 006 | step 0550/0577 | loss 0.0472 | acc 0.9773
+2026-04-29 20:36:57 | Epoch 006 | lr 1.00e-03 | train loss 0.0463 acc 0.9778 | val loss 0.0781 acc 0.9879 macroF1 0.9601 weightedF1 0.9883
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:36:59 | Epoch 007 | step 0050/0577 | loss 0.0561 | acc 0.9733
+2026-04-29 20:37:00 | Epoch 007 | step 0100/0577 | loss 0.0453 | acc 0.9770
+2026-04-29 20:37:01 | Epoch 007 | step 0150/0577 | loss 0.0468 | acc 0.9767
+2026-04-29 20:37:03 | Epoch 007 | step 0200/0577 | loss 0.0424 | acc 0.9792
+2026-04-29 20:37:04 | Epoch 007 | step 0250/0577 | loss 0.0419 | acc 0.9809
+2026-04-29 20:37:05 | Epoch 007 | step 0300/0577 | loss 0.0394 | acc 0.9813
+2026-04-29 20:37:07 | Epoch 007 | step 0350/0577 | loss 0.0413 | acc 0.9808
+2026-04-29 20:37:08 | Epoch 007 | step 0400/0577 | loss 0.0420 | acc 0.9806
+2026-04-29 20:37:09 | Epoch 007 | step 0450/0577 | loss 0.0415 | acc 0.9802
+2026-04-29 20:37:10 | Epoch 007 | step 0500/0577 | loss 0.0404 | acc 0.9805
+2026-04-29 20:37:12 | Epoch 007 | step 0550/0577 | loss 0.0407 | acc 0.9803
+2026-04-29 20:37:13 | Epoch 007 | lr 1.00e-03 | train loss 0.0405 acc 0.9802 | val loss 0.0717 acc 0.9832 macroF1 0.9441 weightedF1 0.9845
+2026-04-29 20:37:14 | Saved best model at epoch 007.
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:37:15 | Epoch 008 | step 0050/0577 | loss 0.0233 | acc 0.9839
+2026-04-29 20:37:17 | Epoch 008 | step 0100/0577 | loss 0.0356 | acc 0.9788
+2026-04-29 20:37:18 | Epoch 008 | step 0150/0577 | loss 0.0430 | acc 0.9796
+2026-04-29 20:37:19 | Epoch 008 | step 0200/0577 | loss 0.0453 | acc 0.9799
+2026-04-29 20:37:21 | Epoch 008 | step 0250/0577 | loss 0.0429 | acc 0.9794
+2026-04-29 20:37:22 | Epoch 008 | step 0300/0577 | loss 0.0418 | acc 0.9809
+2026-04-29 20:37:24 | Epoch 008 | step 0350/0577 | loss 0.0423 | acc 0.9808
+2026-04-29 20:37:25 | Epoch 008 | step 0400/0577 | loss 0.0405 | acc 0.9809
+2026-04-29 20:37:26 | Epoch 008 | step 0450/0577 | loss 0.0394 | acc 0.9809
+2026-04-29 20:37:28 | Epoch 008 | step 0500/0577 | loss 0.0385 | acc 0.9812
+2026-04-29 20:37:29 | Epoch 008 | step 0550/0577 | loss 0.0392 | acc 0.9811
+2026-04-29 20:37:31 | Epoch 008 | lr 1.00e-03 | train loss 0.0400 acc 0.9809 | val loss 0.0713 acc 0.9813 macroF1 0.9401 weightedF1 0.9826
+2026-04-29 20:37:31 | Saved best model at epoch 008.
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:37:32 | Epoch 009 | step 0050/0577 | loss 0.0198 | acc 0.9847
+2026-04-29 20:37:34 | Epoch 009 | step 0100/0577 | loss 0.0243 | acc 0.9838
+2026-04-29 20:37:35 | Epoch 009 | step 0150/0577 | loss 0.0294 | acc 0.9824
+2026-04-29 20:37:37 | Epoch 009 | step 0200/0577 | loss 0.0318 | acc 0.9818
+2026-04-29 20:37:38 | Epoch 009 | step 0250/0577 | loss 0.0340 | acc 0.9816
+2026-04-29 20:37:39 | Epoch 009 | step 0300/0577 | loss 0.0324 | acc 0.9823
+2026-04-29 20:37:41 | Epoch 009 | step 0350/0577 | loss 0.0318 | acc 0.9832
+2026-04-29 20:37:42 | Epoch 009 | step 0400/0577 | loss 0.0318 | acc 0.9828
+2026-04-29 20:37:43 | Epoch 009 | step 0450/0577 | loss 0.0306 | acc 0.9831
+2026-04-29 20:37:45 | Epoch 009 | step 0500/0577 | loss 0.0300 | acc 0.9832
+2026-04-29 20:37:46 | Epoch 009 | step 0550/0577 | loss 0.0307 | acc 0.9832
+2026-04-29 20:37:48 | Epoch 009 | lr 1.00e-03 | train loss 0.0319 acc 0.9831 | val loss 0.0554 acc 0.9817 macroF1 0.9400 weightedF1 0.9832
+2026-04-29 20:37:48 | Saved best model at epoch 009.
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:37:49 | Epoch 010 | step 0050/0577 | loss 0.0207 | acc 0.9847
+2026-04-29 20:37:51 | Epoch 010 | step 0100/0577 | loss 0.0182 | acc 0.9866
+2026-04-29 20:37:52 | Epoch 010 | step 0150/0577 | loss 0.0213 | acc 0.9858
+2026-04-29 20:37:54 | Epoch 010 | step 0200/0577 | loss 0.0212 | acc 0.9859
+2026-04-29 20:37:55 | Epoch 010 | step 0250/0577 | loss 0.0251 | acc 0.9843
+2026-04-29 20:37:57 | Epoch 010 | step 0300/0577 | loss 0.0278 | acc 0.9835
+2026-04-29 20:37:58 | Epoch 010 | step 0350/0577 | loss 0.0280 | acc 0.9841
+2026-04-29 20:37:59 | Epoch 010 | step 0400/0577 | loss 0.0288 | acc 0.9833
+2026-04-29 20:38:01 | Epoch 010 | step 0450/0577 | loss 0.0279 | acc 0.9838
+2026-04-29 20:38:02 | Epoch 010 | step 0500/0577 | loss 0.0290 | acc 0.9837
+2026-04-29 20:38:04 | Epoch 010 | step 0550/0577 | loss 0.0284 | acc 0.9837
+2026-04-29 20:38:05 | Epoch 010 | lr 1.00e-03 | train loss 0.0281 acc 0.9838 | val loss 0.0675 acc 0.9836 macroF1 0.9430 weightedF1 0.9851
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:38:07 | Epoch 011 | step 0050/0577 | loss 0.0206 | acc 0.9841
+2026-04-29 20:38:08 | Epoch 011 | step 0100/0577 | loss 0.0188 | acc 0.9872
+2026-04-29 20:38:09 | Epoch 011 | step 0150/0577 | loss 0.0172 | acc 0.9886
+2026-04-29 20:38:11 | Epoch 011 | step 0200/0577 | loss 0.0184 | acc 0.9884
+2026-04-29 20:38:12 | Epoch 011 | step 0250/0577 | loss 0.0190 | acc 0.9883
+2026-04-29 20:38:13 | Epoch 011 | step 0300/0577 | loss 0.0229 | acc 0.9863
+2026-04-29 20:38:15 | Epoch 011 | step 0350/0577 | loss 0.0218 | acc 0.9868
+2026-04-29 20:38:16 | Epoch 011 | step 0400/0577 | loss 0.0239 | acc 0.9869
+2026-04-29 20:38:17 | Epoch 011 | step 0450/0577 | loss 0.0246 | acc 0.9865
+2026-04-29 20:38:18 | Epoch 011 | step 0500/0577 | loss 0.0246 | acc 0.9868
+2026-04-29 20:38:20 | Epoch 011 | step 0550/0577 | loss 0.0247 | acc 0.9868
+2026-04-29 20:38:22 | Epoch 011 | lr 1.00e-03 | train loss 0.0256 acc 0.9864 | val loss 0.0779 acc 0.9705 macroF1 0.9128 weightedF1 0.9749
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:38:23 | Epoch 012 | step 0050/0577 | loss 0.0172 | acc 0.9886
+2026-04-29 20:38:24 | Epoch 012 | step 0100/0577 | loss 0.0216 | acc 0.9889
+2026-04-29 20:38:26 | Epoch 012 | step 0150/0577 | loss 0.0248 | acc 0.9872
+2026-04-29 20:38:27 | Epoch 012 | step 0200/0577 | loss 0.0260 | acc 0.9870
+2026-04-29 20:38:28 | Epoch 012 | step 0250/0577 | loss 0.0252 | acc 0.9877
+2026-04-29 20:38:29 | Epoch 012 | step 0300/0577 | loss 0.0265 | acc 0.9873
+2026-04-29 20:38:31 | Epoch 012 | step 0350/0577 | loss 0.0247 | acc 0.9876
+2026-04-29 20:38:32 | Epoch 012 | step 0400/0577 | loss 0.0262 | acc 0.9874
+2026-04-29 20:38:33 | Epoch 012 | step 0450/0577 | loss 0.0277 | acc 0.9870
+2026-04-29 20:38:35 | Epoch 012 | step 0500/0577 | loss 0.0285 | acc 0.9869
+2026-04-29 20:38:36 | Epoch 012 | step 0550/0577 | loss 0.0284 | acc 0.9860
+2026-04-29 20:38:38 | Epoch 012 | lr 1.00e-03 | train loss 0.0280 acc 0.9860 | val loss 0.0763 acc 0.9883 macroF1 0.9579 weightedF1 0.9888
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:38:39 | Epoch 013 | step 0050/0577 | loss 0.0172 | acc 0.9859
+2026-04-29 20:38:41 | Epoch 013 | step 0100/0577 | loss 0.0138 | acc 0.9882
+2026-04-29 20:38:42 | Epoch 013 | step 0150/0577 | loss 0.0158 | acc 0.9883
+2026-04-29 20:38:44 | Epoch 013 | step 0200/0577 | loss 0.0157 | acc 0.9887
+2026-04-29 20:38:45 | Epoch 013 | step 0250/0577 | loss 0.0153 | acc 0.9897
+2026-04-29 20:38:46 | Epoch 013 | step 0300/0577 | loss 0.0148 | acc 0.9902
+2026-04-29 20:38:48 | Epoch 013 | step 0350/0577 | loss 0.0143 | acc 0.9903
+2026-04-29 20:38:49 | Epoch 013 | step 0400/0577 | loss 0.0138 | acc 0.9906
+2026-04-29 20:38:51 | Epoch 013 | step 0450/0577 | loss 0.0137 | acc 0.9908
+2026-04-29 20:38:52 | Epoch 013 | step 0500/0577 | loss 0.0140 | acc 0.9909
+2026-04-29 20:38:53 | Epoch 013 | step 0550/0577 | loss 0.0146 | acc 0.9908
+2026-04-29 20:38:55 | Epoch 013 | lr 1.00e-04 | train loss 0.0143 acc 0.9909 | val loss 0.0772 acc 0.9901 macroF1 0.9647 weightedF1 0.9905
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:38:57 | Epoch 014 | step 0050/0577 | loss 0.0084 | acc 0.9927
+2026-04-29 20:38:58 | Epoch 014 | step 0100/0577 | loss 0.0088 | acc 0.9932
+2026-04-29 20:38:59 | Epoch 014 | step 0150/0577 | loss 0.0091 | acc 0.9934
+2026-04-29 20:39:00 | Epoch 014 | step 0200/0577 | loss 0.0089 | acc 0.9937
+2026-04-29 20:39:02 | Epoch 014 | step 0250/0577 | loss 0.0091 | acc 0.9938
+2026-04-29 20:39:03 | Epoch 014 | step 0300/0577 | loss 0.0091 | acc 0.9936
+2026-04-29 20:39:04 | Epoch 014 | step 0350/0577 | loss 0.0093 | acc 0.9936
+2026-04-29 20:39:06 | Epoch 014 | step 0400/0577 | loss 0.0102 | acc 0.9934
+2026-04-29 20:39:07 | Epoch 014 | step 0450/0577 | loss 0.0098 | acc 0.9934
+2026-04-29 20:39:09 | Epoch 014 | step 0500/0577 | loss 0.0096 | acc 0.9936
+2026-04-29 20:39:10 | Epoch 014 | step 0550/0577 | loss 0.0096 | acc 0.9937
+2026-04-29 20:39:11 | Epoch 014 | lr 1.00e-04 | train loss 0.0097 acc 0.9937 | val loss 0.0821 acc 0.9926 macroF1 0.9728 weightedF1 0.9928
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:39:13 | Epoch 015 | step 0050/0577 | loss 0.0082 | acc 0.9941
+2026-04-29 20:39:14 | Epoch 015 | step 0100/0577 | loss 0.0098 | acc 0.9946
+2026-04-29 20:39:16 | Epoch 015 | step 0150/0577 | loss 0.0102 | acc 0.9944
+2026-04-29 20:39:17 | Epoch 015 | step 0200/0577 | loss 0.0095 | acc 0.9950
+2026-04-29 20:39:19 | Epoch 015 | step 0250/0577 | loss 0.0090 | acc 0.9947
+2026-04-29 20:39:20 | Epoch 015 | step 0300/0577 | loss 0.0092 | acc 0.9944
+2026-04-29 20:39:21 | Epoch 015 | step 0350/0577 | loss 0.0087 | acc 0.9945
+2026-04-29 20:39:23 | Epoch 015 | step 0400/0577 | loss 0.0090 | acc 0.9945
+2026-04-29 20:39:24 | Epoch 015 | step 0450/0577 | loss 0.0088 | acc 0.9945
+2026-04-29 20:39:26 | Epoch 015 | step 0500/0577 | loss 0.0089 | acc 0.9945
+2026-04-29 20:39:27 | Epoch 015 | step 0550/0577 | loss 0.0087 | acc 0.9945
+2026-04-29 20:39:29 | Epoch 015 | lr 1.00e-04 | train loss 0.0085 acc 0.9945 | val loss 0.0878 acc 0.9923 macroF1 0.9723 weightedF1 0.9925
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:39:30 | Epoch 016 | step 0050/0577 | loss 0.0073 | acc 0.9950
+2026-04-29 20:39:32 | Epoch 016 | step 0100/0577 | loss 0.0074 | acc 0.9957
+2026-04-29 20:39:33 | Epoch 016 | step 0150/0577 | loss 0.0076 | acc 0.9959
+2026-04-29 20:39:34 | Epoch 016 | step 0200/0577 | loss 0.0073 | acc 0.9956
+2026-04-29 20:39:36 | Epoch 016 | step 0250/0577 | loss 0.0071 | acc 0.9954
+2026-04-29 20:39:37 | Epoch 016 | step 0300/0577 | loss 0.0069 | acc 0.9954
+2026-04-29 20:39:39 | Epoch 016 | step 0350/0577 | loss 0.0073 | acc 0.9954
+2026-04-29 20:39:40 | Epoch 016 | step 0400/0577 | loss 0.0071 | acc 0.9955
+2026-04-29 20:39:41 | Epoch 016 | step 0450/0577 | loss 0.0069 | acc 0.9957
+2026-04-29 20:39:43 | Epoch 016 | step 0500/0577 | loss 0.0068 | acc 0.9956
+2026-04-29 20:39:44 | Epoch 016 | step 0550/0577 | loss 0.0067 | acc 0.9955
+2026-04-29 20:39:46 | Epoch 016 | lr 1.00e-05 | train loss 0.0068 acc 0.9955 | val loss 0.0886 acc 0.9921 macroF1 0.9715 weightedF1 0.9923
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:39:47 | Epoch 017 | step 0050/0577 | loss 0.0055 | acc 0.9964
+2026-04-29 20:39:49 | Epoch 017 | step 0100/0577 | loss 0.0083 | acc 0.9958
+2026-04-29 20:39:50 | Epoch 017 | step 0150/0577 | loss 0.0073 | acc 0.9957
+2026-04-29 20:39:51 | Epoch 017 | step 0200/0577 | loss 0.0074 | acc 0.9955
+2026-04-29 20:39:53 | Epoch 017 | step 0250/0577 | loss 0.0070 | acc 0.9957
+2026-04-29 20:39:54 | Epoch 017 | step 0300/0577 | loss 0.0066 | acc 0.9956
+2026-04-29 20:39:55 | Epoch 017 | step 0350/0577 | loss 0.0065 | acc 0.9956
+2026-04-29 20:39:57 | Epoch 017 | step 0400/0577 | loss 0.0065 | acc 0.9955
+2026-04-29 20:39:58 | Epoch 017 | step 0450/0577 | loss 0.0064 | acc 0.9954
+2026-04-29 20:39:59 | Epoch 017 | step 0500/0577 | loss 0.0065 | acc 0.9953
+2026-04-29 20:40:00 | Epoch 017 | step 0550/0577 | loss 0.0064 | acc 0.9954
+2026-04-29 20:40:02 | Epoch 017 | lr 1.00e-05 | train loss 0.0063 acc 0.9954 | val loss 0.0953 acc 0.9929 macroF1 0.9749 weightedF1 0.9931
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:40:03 | Epoch 018 | step 0050/0577 | loss 0.0068 | acc 0.9956
+2026-04-29 20:40:05 | Epoch 018 | step 0100/0577 | loss 0.0072 | acc 0.9951
+2026-04-29 20:40:06 | Epoch 018 | step 0150/0577 | loss 0.0062 | acc 0.9957
+2026-04-29 20:40:07 | Epoch 018 | step 0200/0577 | loss 0.0062 | acc 0.9954
+2026-04-29 20:40:08 | Epoch 018 | step 0250/0577 | loss 0.0061 | acc 0.9954
+2026-04-29 20:40:10 | Epoch 018 | step 0300/0577 | loss 0.0058 | acc 0.9954
+2026-04-29 20:40:11 | Epoch 018 | step 0350/0577 | loss 0.0059 | acc 0.9955
+2026-04-29 20:40:12 | Epoch 018 | step 0400/0577 | loss 0.0059 | acc 0.9955
+2026-04-29 20:40:14 | Epoch 018 | step 0450/0577 | loss 0.0061 | acc 0.9953
+2026-04-29 20:40:15 | Epoch 018 | step 0500/0577 | loss 0.0065 | acc 0.9955
+2026-04-29 20:40:16 | Epoch 018 | step 0550/0577 | loss 0.0063 | acc 0.9956
+2026-04-29 20:40:18 | Epoch 018 | lr 1.00e-05 | train loss 0.0066 acc 0.9956 | val loss 0.0903 acc 0.9928 macroF1 0.9736 weightedF1 0.9930
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:40:19 | Epoch 019 | step 0050/0577 | loss 0.0063 | acc 0.9967
+2026-04-29 20:40:21 | Epoch 019 | step 0100/0577 | loss 0.0068 | acc 0.9960
+2026-04-29 20:40:22 | Epoch 019 | step 0150/0577 | loss 0.0059 | acc 0.9962
+2026-04-29 20:40:23 | Epoch 019 | step 0200/0577 | loss 0.0055 | acc 0.9962
+2026-04-29 20:40:25 | Epoch 019 | step 0250/0577 | loss 0.0054 | acc 0.9960
+2026-04-29 20:40:26 | Epoch 019 | step 0300/0577 | loss 0.0055 | acc 0.9960
+2026-04-29 20:40:27 | Epoch 019 | step 0350/0577 | loss 0.0059 | acc 0.9958
+2026-04-29 20:40:29 | Epoch 019 | step 0400/0577 | loss 0.0064 | acc 0.9958
+2026-04-29 20:40:30 | Epoch 019 | step 0450/0577 | loss 0.0065 | acc 0.9958
+2026-04-29 20:40:31 | Epoch 019 | step 0500/0577 | loss 0.0065 | acc 0.9956
+2026-04-29 20:40:33 | Epoch 019 | step 0550/0577 | loss 0.0064 | acc 0.9956
+2026-04-29 20:40:34 | Epoch 019 | lr 1.00e-06 | train loss 0.0063 acc 0.9957 | val loss 0.0889 acc 0.9923 macroF1 0.9721 weightedF1 0.9925
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:40:36 | Epoch 020 | step 0050/0577 | loss 0.0076 | acc 0.9947
+2026-04-29 20:40:37 | Epoch 020 | step 0100/0577 | loss 0.0073 | acc 0.9949
+2026-04-29 20:40:38 | Epoch 020 | step 0150/0577 | loss 0.0067 | acc 0.9950
+2026-04-29 20:40:40 | Epoch 020 | step 0200/0577 | loss 0.0061 | acc 0.9954
+2026-04-29 20:40:41 | Epoch 020 | step 0250/0577 | loss 0.0065 | acc 0.9954
+2026-04-29 20:40:42 | Epoch 020 | step 0300/0577 | loss 0.0063 | acc 0.9954
+2026-04-29 20:40:44 | Epoch 020 | step 0350/0577 | loss 0.0064 | acc 0.9954
+2026-04-29 20:40:45 | Epoch 020 | step 0400/0577 | loss 0.0063 | acc 0.9954
+2026-04-29 20:40:47 | Epoch 020 | step 0450/0577 | loss 0.0062 | acc 0.9953
+2026-04-29 20:40:48 | Epoch 020 | step 0500/0577 | loss 0.0064 | acc 0.9954
+2026-04-29 20:40:49 | Epoch 020 | step 0550/0577 | loss 0.0065 | acc 0.9955
+2026-04-29 20:40:51 | Epoch 020 | lr 1.00e-06 | train loss 0.0064 acc 0.9955 | val loss 0.0896 acc 0.9926 macroF1 0.9736 weightedF1 0.9928
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:40:52 | Epoch 021 | step 0050/0577 | loss 0.0075 | acc 0.9950
+2026-04-29 20:40:54 | Epoch 021 | step 0100/0577 | loss 0.0079 | acc 0.9952
+2026-04-29 20:40:55 | Epoch 021 | step 0150/0577 | loss 0.0070 | acc 0.9952
+2026-04-29 20:40:56 | Epoch 021 | step 0200/0577 | loss 0.0067 | acc 0.9951
+2026-04-29 20:40:57 | Epoch 021 | step 0250/0577 | loss 0.0067 | acc 0.9952
+2026-04-29 20:40:58 | Epoch 021 | step 0300/0577 | loss 0.0064 | acc 0.9953
+2026-04-29 20:41:00 | Epoch 021 | step 0350/0577 | loss 0.0064 | acc 0.9953
+2026-04-29 20:41:01 | Epoch 021 | step 0400/0577 | loss 0.0062 | acc 0.9954
+2026-04-29 20:41:03 | Epoch 021 | step 0450/0577 | loss 0.0062 | acc 0.9953
+2026-04-29 20:41:04 | Epoch 021 | step 0500/0577 | loss 0.0061 | acc 0.9955
+2026-04-29 20:41:05 | Epoch 021 | step 0550/0577 | loss 0.0060 | acc 0.9955
+2026-04-29 20:41:07 | Epoch 021 | lr 1.00e-06 | train loss 0.0059 acc 0.9956 | val loss 0.0911 acc 0.9925 macroF1 0.9732 weightedF1 0.9927
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:41:08 | Epoch 022 | step 0050/0577 | loss 0.0059 | acc 0.9964
+2026-04-29 20:41:09 | Epoch 022 | step 0100/0577 | loss 0.0059 | acc 0.9957
+2026-04-29 20:41:11 | Epoch 022 | step 0150/0577 | loss 0.0062 | acc 0.9956
+2026-04-29 20:41:12 | Epoch 022 | step 0200/0577 | loss 0.0060 | acc 0.9955
+2026-04-29 20:41:13 | Epoch 022 | step 0250/0577 | loss 0.0058 | acc 0.9954
+2026-04-29 20:41:15 | Epoch 022 | step 0300/0577 | loss 0.0057 | acc 0.9957
+2026-04-29 20:41:16 | Epoch 022 | step 0350/0577 | loss 0.0059 | acc 0.9956
+2026-04-29 20:41:17 | Epoch 022 | step 0400/0577 | loss 0.0056 | acc 0.9956
+2026-04-29 20:41:19 | Epoch 022 | step 0450/0577 | loss 0.0061 | acc 0.9956
+2026-04-29 20:41:20 | Epoch 022 | step 0500/0577 | loss 0.0060 | acc 0.9957
+2026-04-29 20:41:21 | Epoch 022 | step 0550/0577 | loss 0.0060 | acc 0.9957
+2026-04-29 20:41:23 | Epoch 022 | lr 1.00e-06 | train loss 0.0060 acc 0.9957 | val loss 0.0935 acc 0.9928 macroF1 0.9747 weightedF1 0.9930
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:41:24 | Epoch 023 | step 0050/0577 | loss 0.0042 | acc 0.9964
+2026-04-29 20:41:26 | Epoch 023 | step 0100/0577 | loss 0.0053 | acc 0.9959
+2026-04-29 20:41:27 | Epoch 023 | step 0150/0577 | loss 0.0067 | acc 0.9959
+2026-04-29 20:41:29 | Epoch 023 | step 0200/0577 | loss 0.0066 | acc 0.9958
+2026-04-29 20:41:30 | Epoch 023 | step 0250/0577 | loss 0.0065 | acc 0.9959
+2026-04-29 20:41:32 | Epoch 023 | step 0300/0577 | loss 0.0063 | acc 0.9958
+2026-04-29 20:41:33 | Epoch 023 | step 0350/0577 | loss 0.0063 | acc 0.9959
+2026-04-29 20:41:34 | Epoch 023 | step 0400/0577 | loss 0.0063 | acc 0.9959
+2026-04-29 20:41:35 | Epoch 023 | step 0450/0577 | loss 0.0062 | acc 0.9959
+2026-04-29 20:41:37 | Epoch 023 | step 0500/0577 | loss 0.0063 | acc 0.9959
+2026-04-29 20:41:38 | Epoch 023 | step 0550/0577 | loss 0.0064 | acc 0.9957
+2026-04-29 20:41:39 | Epoch 023 | lr 1.00e-06 | train loss 0.0063 acc 0.9958 | val loss 0.0883 acc 0.9926 macroF1 0.9725 weightedF1 0.9928
+/home/mazhiyuan/LZY/ECG/train.py:166: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp):
+2026-04-29 20:41:41 | Epoch 024 | step 0050/0577 | loss 0.0049 | acc 0.9970
+2026-04-29 20:41:42 | Epoch 024 | step 0100/0577 | loss 0.0090 | acc 0.9965
+2026-04-29 20:41:44 | Epoch 024 | step 0150/0577 | loss 0.0072 | acc 0.9962
+2026-04-29 20:41:45 | Epoch 024 | step 0200/0577 | loss 0.0068 | acc 0.9960
+2026-04-29 20:41:47 | Epoch 024 | step 0250/0577 | loss 0.0069 | acc 0.9961
+2026-04-29 20:41:48 | Epoch 024 | step 0300/0577 | loss 0.0071 | acc 0.9962
+2026-04-29 20:41:49 | Epoch 024 | step 0350/0577 | loss 0.0066 | acc 0.9962
+2026-04-29 20:41:50 | Epoch 024 | step 0400/0577 | loss 0.0066 | acc 0.9961
+2026-04-29 20:41:52 | Epoch 024 | step 0450/0577 | loss 0.0066 | acc 0.9960
+2026-04-29 20:41:53 | Epoch 024 | step 0500/0577 | loss 0.0065 | acc 0.9959
+2026-04-29 20:41:55 | Epoch 024 | step 0550/0577 | loss 0.0064 | acc 0.9958
+2026-04-29 20:41:56 | Epoch 024 | lr 1.00e-06 | train loss 0.0064 acc 0.9958 | val loss 0.0889 acc 0.9924 macroF1 0.9722 weightedF1 0.9926
+2026-04-29 20:41:56 | Early stopping: no val-loss improvement for 15 epochs.
+/home/mazhiyuan/LZY/ECG/train.py:337: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(save_dir / "best_model.pt", map_location=device)
+2026-04-29 20:41:57 | ========== Test Results ==========
+2026-04-29 20:41:57 | Best epoch: 9
+2026-04-29 20:41:57 | loss: 0.0700 | acc: 0.9779 | balanced_acc: 0.9843 | macro_f1: 0.9310 | weighted_f1: 0.9800 | macro_precision: 0.8994 | macro_recall: 0.9843 | macro_auc_ovr: 0.9989 | weighted_auc_ovr: 0.9993
+2026-04-29 20:41:57 | Confusion matrix:
+[[6985  145   38    4    0]
+ [   5  188    2    0    0]
+ [   6    0  692    0    0]
+ [   0    0    0  657    0]
+ [   1    3    0    0  493]]
+2026-04-29 20:41:57 | Classification report:
+              precision    recall  f1-score   support
+
+           N     0.9983    0.9739    0.9860      7172
+           A     0.5595    0.9641    0.7081       195
+           V     0.9454    0.9914    0.9678       698
+           L     0.9939    1.0000    0.9970       657
+           R     1.0000    0.9920    0.9960       497
+
+    accuracy                         0.9779      9219
+   macro avg     0.8994    0.9843    0.9310      9219
+weighted avg     0.9848    0.9779    0.9800      9219
+
+2026-04-29 20:41:57 | Artifacts saved to: saved/NM2019_MITBIH_5class/seed_3/fold_05/20260429-203513
