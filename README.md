@@ -31,6 +31,8 @@ Two NumPy files required in `data/`:
 - `dataset_raw.npy`: Shape (92,192, 300) - ECG signal samples
 - `labelset_raw.npy`: Shape (92,192,) - Integer class labels {0, 1, 2, 3, 4}
 
+available at https://cloud.tsinghua.edu.cn/d/78ae667b037c4fad97c0/
+
 ## Project Structure
 
 ```
@@ -52,8 +54,6 @@ Two NumPy files required in `data/`:
 │   ├── load_data.py        # Data loading and preprocessing
 │   ├── load_model.py       # Model utilities
 │   └── aug.py              # Data augmentation
-├── saved/                   # Saved model checkpoints (organized by model and seed)
-├── logs/                    # Training logs and metrics
 ├── logs_parallel/           # Logs from parallel training
 ├── best_model/             # Best trained models for each architecture
 └── visualization/           # Analysis and visualization scripts
